@@ -609,19 +609,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 525462011}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 525462013}
-        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
-        m_MethodName: ChoiceButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &525462011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0e382c1fa55ec42a2fc93d1f619b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChoice
-  _playerChoice: 1
+  _buttonChoice: 1
   _isPlayerOne: 0
 --- !u!1 &631052886
 GameObject:
@@ -966,19 +954,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 890452279}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 890452281}
-        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
-        m_MethodName: ChoiceButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &890452279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,7 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0e382c1fa55ec42a2fc93d1f619b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChoice
-  _playerChoice: 1
+  _buttonChoice: 1
   _isPlayerOne: 1
 --- !u!1 &944177888
 GameObject:
@@ -1171,19 +1147,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 945504166}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 945504168}
-        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
-        m_MethodName: ChoiceButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &945504166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0e382c1fa55ec42a2fc93d1f619b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChoice
-  _playerChoice: 2
+  _buttonChoice: 2
   _isPlayerOne: 1
 --- !u!1 &1123197001
 GameObject:
@@ -1454,19 +1418,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1156398501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1156398503}
-        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
-        m_MethodName: ChoiceButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1156398501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0e382c1fa55ec42a2fc93d1f619b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChoice
-  _playerChoice: 0
+  _buttonChoice: 0
   _isPlayerOne: 1
 --- !u!1 &1158643051
 GameObject:
@@ -1548,7 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0e382c1fa55ec42a2fc93d1f619b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChoice
-  _playerChoice: 0
+  _buttonChoice: 0
   _isPlayerOne: 0
 --- !u!4 &1158643053
 Transform:
@@ -1878,19 +1830,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1609188851}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1609188853}
-        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
-        m_MethodName: ChoiceButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1609188851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0e382c1fa55ec42a2fc93d1f619b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChoice
-  _playerChoice: 2
+  _buttonChoice: 2
   _isPlayerOne: 0
 --- !u!1 &1670463990
 GameObject:
@@ -2475,19 +2415,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2079389528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2079389530}
-        m_TargetAssemblyTypeName: ButtonChoice, Assembly-CSharp
-        m_MethodName: ChoiceButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2079389528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2538,7 +2466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0e382c1fa55ec42a2fc93d1f619b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChoice
-  _playerChoice: 0
+  _buttonChoice: 0
   _isPlayerOne: 0
 --- !u!1 &2095821944
 GameObject:
