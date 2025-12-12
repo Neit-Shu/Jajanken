@@ -8,8 +8,7 @@ public class GameManager : MonoBehaviour
     public static event Action<State> SendState;
     // Ссылки на UI элементы и компоненты
     [SerializeField] private GameObject _AIToggleButton;
-    [SerializeField] private TextMeshProUGUI _playerOneScoreText;
-    [SerializeField] private TextMeshProUGUI _playerTwoScoreText;
+    
     [SerializeField] private Sprite _rockImage;
     [SerializeField] private Sprite _paperImage;
     [SerializeField] private Sprite _scissorsImage;
@@ -17,11 +16,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image _playerTwoSelectedImage;
     
     [SerializeField] private GameObject _endRoundPanel;
-    [SerializeField] private TextMeshProUGUI _endRoundMessageText;
+    
 
     // Переменные состояния игры
-    private int _playerOneCurrentScore = 0;
-    private int _playerTwoCurrentScore = 0;
+    
     private Figure _playerOneChoice = Figure.NONE;
     private bool _isPlayerOneSelected = false;
     private Figure _playerTwoChoice = Figure.NONE;
@@ -39,24 +37,16 @@ public class GameManager : MonoBehaviour
     {
         ButtonChoice.SendChoice -= OnChoice; // Отписка от события
     }
-
-    private void Awake()
-    {
-        SetScoreText(_playerOneScoreText, _playerOneCurrentScore, _playerTwoCurrentScore);
-        SetScoreText(_playerTwoScoreText, _playerTwoCurrentScore, _playerOneCurrentScore);
-        _AIToggleButtonText = _AIToggleButton.GetComponentInChildren<TextMeshProUGUI>(); // Получение текста кнопки
-    }
-
+    
     private void Start()
     {
+        _AIToggleButtonText = _AIToggleButton.GetComponentInChildren<TextMeshProUGUI>(); 
         SetAiButtonText(_isVersusAi);
         StartGame(); // Запуск первого раунда
     }
 
     public void StartGame()
     {
-        _endRoundMessageText.SetText("");
-
         _playerOneChoice = Figure.NONE;
         _playerTwoChoice = Figure.NONE;
         _isPlayerOneSelected = false;
@@ -115,29 +105,22 @@ public class GameManager : MonoBehaviour
     private void DetermineWinner()
     {
         if (_playerOneChoice == _playerTwoChoice)
-        {
-            _endRoundMessageText.SetText("Ничья!");
+        {          
             SendState?.Invoke(State.DRAW);
         }
         else if (_playerOneChoice == Figure.ROCK && _playerTwoChoice == Figure.SCISSORS
             || _playerOneChoice == Figure.SCISSORS && _playerTwoChoice == Figure.PAPER
             || _playerOneChoice == Figure.PAPER && _playerTwoChoice == Figure.ROCK)
-        {
-            _endRoundMessageText.SetText("Игрок 1 победил!");
-            _playerOneCurrentScore++;
+        {           
             SendState?.Invoke(State.PLAYER1WIN);
         }
         else
-        {
-            _endRoundMessageText.SetText("Игрок 2 победил!");
-            _playerTwoCurrentScore++;
+        {           
             SendState?.Invoke(State.PLAYER2WIN);
         }
 
-        _endRoundPanel.SetActive(true);
-                
-        SetScoreText(_playerOneScoreText, _playerOneCurrentScore, _playerTwoCurrentScore);
-        SetScoreText(_playerTwoScoreText, _playerTwoCurrentScore, _playerOneCurrentScore);
+        _endRoundPanel.SetActive(true);               
+        
     }
 
     private void SetSelectedImage(Figure figure, Image image)
@@ -150,10 +133,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SetScoreText(TextMeshProUGUI text, int player1Score, int player2Score)
-    {
-        text.SetText($"{player1Score} / {player2Score}");
-    }
+    
 
     private void SetAiButtonText(bool state)
     {
