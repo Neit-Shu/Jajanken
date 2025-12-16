@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static event Action<State> SendState;
-    [SerializeField] private GameObject _endRoundPanel;
-   
+    public static event Action<State> SendState;    
     private Figure _playerOneChoice = Figure.NONE;
     private bool _isPlayerOneSelected = false;
     private Figure _playerTwoChoice = Figure.NONE;
@@ -90,9 +88,7 @@ public class GameManager : MonoBehaviour
         else
         {
             SendState?.Invoke(State.PLAYER2WIN);
-        }
-
-        _endRoundPanel.SetActive(true);
+        }        
     }      
     private void OnAiButtonState(bool state)
     {

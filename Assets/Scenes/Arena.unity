@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 451579477}
   - component: {fileID: 451579476}
   - component: {fileID: 451579475}
+  - component: {fileID: 451579478}
   m_Layer: 5
   m_Name: EndRoundPanel_Button
   m_TagString: Untagged
@@ -464,31 +465,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 451579476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 944177889}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 451579473}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &451579476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +504,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451579473}
   m_CullTransparentMesh: 1
+--- !u!114 &451579478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451579473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecbbcdfc1827a34f87e52c67a474889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &525462008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3bd1457846b3e49a298139ab1e4f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  _endRoundPanel: {fileID: 451579473}
 --- !u!4 &944177890
 Transform:
   m_ObjectHideFlags: 0
