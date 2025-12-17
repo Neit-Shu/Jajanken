@@ -26,7 +26,15 @@ public class UIButtonAi : MonoBehaviour
     }
     private void Start()
     {
-        SendAiButtonState?.Invoke(_buttonState);                
+        if(PlayerPrefs.GetInt(Prefs.Prefs_VersusAiSet_Key, Prefs.Pref_VersusAiSet_DefaultValue) == 1)
+        {
+            _buttonState = true;
+        }
+        else
+        {
+            _buttonState = false;
+        }
+            SendAiButtonState?.Invoke(_buttonState);                
 
         SetAiButtonText(_buttonState);                           
     }
@@ -34,7 +42,15 @@ public class UIButtonAi : MonoBehaviour
     private void PressButton()
     {
         _buttonState = !_buttonState;
-        SendAiButtonState?.Invoke(_buttonState);
+        if(_buttonState)
+        {
+            PlayerPrefs.SetInt(Prefs.Prefs_VersusAiSet_Key, 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt(Prefs.Prefs_VersusAiSet_Key, 0);
+        }
+            SendAiButtonState?.Invoke(_buttonState);
         SetAiButtonText(_buttonState);
     }
     private void SetAiButtonText(bool state)
